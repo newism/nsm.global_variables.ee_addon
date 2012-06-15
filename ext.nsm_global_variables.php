@@ -92,17 +92,22 @@ class Nsm_global_variables_ext
 
 
 
-
-
-
 	// ===============================
 	// = Hook Functions =
 	// ===============================
 
-	public function template_post_parse()
+	public function template_post_parse($final_template, $sub, $site_id)
 	{
-		$EE =& get_instance();
-		var_dump($EE->TMPL);exit;
+		foreach ($this->settings['variables'] as $global_var) {
+			if (strpos($final_template, $global_var['name']) !== false) {
+				$final_template = str_replace(
+					'{'.$global_var['name'].'}',
+					$global_var['value'],
+					$final_template
+				);
+			}
+		}
+		return $final_template;
 	}
 
 
