@@ -20,4 +20,4 @@ if(!defined('NSM_GLOBAL_VARIABLES_VERSION')) {
 $config['name'] 	= NSM_GLOBAL_VARIABLES_NAME;
 $config["version"] 	= NSM_GLOBAL_VARIABLES_VERSION;
 
-$config['nsm_addon_updater']['versions_xml'] = 'http://github.com/newism/nsm.example_addon.ee_addon/raw/master/versions.xml';
+//$config['nsm_addon_updater']['versions_xml'] = 'http://github.com/newism/nsm.example_addon.ee_addon/raw/master/versions.xml';
